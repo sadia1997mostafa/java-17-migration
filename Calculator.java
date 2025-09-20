@@ -3,6 +3,7 @@ public class Calculator {
     public int subtract(int a, int b) { return a - b; }
     public int multiply(int a, int b) { return a * b; }
     public double divide(int a, int b) {
-        return (double) a / b; // no zero-guard yet (we'll use this for conflicts later)
+        if (b == 0) return 0; // different behavior -> intentional conflict
+        return (double) a / b;
     }
 }

@@ -1,0 +1,25 @@
+name: Java Build
+
+on:
+  push:
+    branches: ["**"]      # run on every push
+  pull_request:
+    branches: ["main"]    # and on every PR targeting main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Compile Java
+        run: |
+          shopt -s nullglob
+          javac *.java

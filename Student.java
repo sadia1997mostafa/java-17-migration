@@ -8,7 +8,12 @@ public class Student {
     public Student(String id, String name, int age) {
         this.id = id;
         this.name = name;
-        this.age = age;
+        this.age = a
+        @Override
+public String toString() {
+    return name + " (" + id + "), age " + age;
+}
+ge;
     }
 
     public String getId() { return id; }

@@ -1,5 +1,9 @@
  {
+<<<<<<< HEAD
 
+=======
+   "name": "Java Build",
+>>>>>>> ini
    "on": {
      "push": {
        "branches": ["**"]
